@@ -11,3 +11,7 @@ app.listen(port, () => {
 });
 
 app.use(express.static("public"));
+
+app.get("/newBlog.ejs",(req,res)=>{
+  res.render("newBlog.ejs");
+})
