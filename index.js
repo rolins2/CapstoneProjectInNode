@@ -15,3 +15,7 @@ app.use(express.static("public"));
 app.get("/newBlog.ejs",(req,res)=>{
   res.render("newBlog.ejs");
 })
+
+app.post("/submit",(req,res)=>{
+     console.log(req.body);
+})

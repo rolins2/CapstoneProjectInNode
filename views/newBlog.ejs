@@ -1,23 +1,20 @@
 <%- include("partials/header.ejs") %>
 
-
-<div class="container col-xxl-8 px-4 py-5 stbtn">
+<div class=" stbtn">
+  <div class="container col-xxl-8 px-4 py-5 stbtn">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <form>
+        <form action="/submit" method="POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Blog Name</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              <div id="emailHelp" class="form-text">Try to name your blog something catchy and fun .</div>
             </div>
             <div class="mb-3">
               <label for="blogContent"  class="form-label">Your Blog </label>
               <textarea id = "blogContent" class="form-control" cols="50%" rows="8"></textarea>
             </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
+          
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>
@@ -26,7 +23,7 @@
         
             <div>
                 
-  <video height="500" width = "100%" autoplay muted>
+  <video height="400" width = "100%" autoplay muted>
     <source src="/styles/pex.mp4" type="video/mp4">
     
   </video>
@@ -37,4 +34,8 @@
       </div>
     </div>
   </div>
+</div>
+
+
+
 <%- include("partials/footer.ejs") %> 
