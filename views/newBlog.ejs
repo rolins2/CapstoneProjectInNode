@@ -7,12 +7,12 @@
         <form action="/submit" method="POST">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Blog Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="text" class="form-control" id="exampleInputEmail1" name ="blogsName" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">Try to name your blog something catchy and fun .</div>
             </div>
             <div class="mb-3">
               <label for="blogContent"  class="form-label">Your Blog </label>
-              <textarea id = "blogContent" class="form-control" cols="50%" rows="8"></textarea>
+              <textarea id = "blogContent" name ="blogsContent" class="form-control" cols="50%" rows="8"></textarea>
             </div>
           
             <button type="submit" class="btn btn-primary">Submit</button>
