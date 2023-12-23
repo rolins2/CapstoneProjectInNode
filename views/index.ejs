@@ -49,7 +49,19 @@
             </div>
           </div>
 
+        
+          <div> Here we try to generate a list</div>
 
+        <ul>
+          <% for( let i = 0; i < ttls.length; i++ ) { %>
+
+              <li> <h2>   <%= ttls[i]  %> </h2>   
+                <p> <%= blgs[i] %></p>
+                
+                </li>
+              
+            <% } %>
+        </ul>
       </div>
 
     

@@ -3,14 +3,14 @@ import bodyParser from "body-parser";
 
 
 const app = express();
-const ttls =[];
-const blgs =[];
+const ttls =["Cattao"];
+const blgs =["Leandro torsad was a substitution that changed liverpools game"];
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = 3000;
 app.get("/",(req,res)=>{
-  res.render("index.ejs")
+  res.render("index.ejs",{ttls,blgs});
 })
 
 app.listen(port, () => {
@@ -24,13 +24,10 @@ app.get("/newBlog.ejs",(req,res)=>{
 })
 
 app.post("/submit",(req,res)=>{
-     console.log(req.body);
      ttls.push(req.body.blogsName);
      blgs.push(req.body.blogsContent);
 
 
-     console.log(ttls[0]);
-     console.log(blgs[0]);
 
 
      res.render("index.ejs",{ttls,blgs});
