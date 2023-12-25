@@ -52,11 +52,13 @@
         
           <div> Here we try to generate a list</div>
 
-        <ul>
+        <ul class = "container p-2">
           <% for( let i = 0; i < ttls.length; i++ ) { %>
 
-              <li> <h2>   <%= ttls[i]  %> </h2>   
+              <li class ="bpix mb-4 p-4"> <h2>   <%= ttls[i]  %> </h2>   
                 <p> <%= blgs[i] %></p>
+
+                <button class="btn btn-primary act">Read Full Blog  </button>
                 
                 </li>
               
