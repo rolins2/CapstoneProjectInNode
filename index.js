@@ -6,12 +6,16 @@ const app = express();
 const ttls =["Cattao"];
 const blgs =["Leandro torsad was a substitution that changed liverpools game"];
 
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = 3000;
 app.get("/",(req,res)=>{
   res.render("index.ejs",{ttls,blgs});
 })
+
+
 
 app.listen(port, () => {
   console.log(`Running on ${port}`);
@@ -31,4 +35,11 @@ app.post("/submit",(req,res)=>{
 
 
      res.render("index.ejs",{ttls,blgs});
+})
+
+
+app.post("/blogsDel",(req,res)=>{
+  console.log("delete blog are you sure ?");
+  console.log(req.body);
+  console.log(req.body.deleteBtns);
 })

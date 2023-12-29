@@ -14,7 +14,7 @@
 
       <div class=" container ">
 
-        <h2 class=" d-flex justify-content-sm-center"> <i class="ppl"> Here are some of our blogs......</i></h2>
+        <h2 class=" d-flex justify-content-sm-center"> <i class="ppl"> Here are some of our featured blogs......</i></h2>
 
         <div class="row mb-2">
             <div class="col-md-6">
@@ -50,7 +50,7 @@
           </div>
 
         
-          <div> Here we try to generate a list</div>
+          <div class=" d-flex justify-content-sm-center ppl "> Some More blogs </div>
 
         <ul class = "container p-2">
           <% for( let i = 0; i < ttls.length; i++ ) { %>
@@ -58,7 +58,21 @@
               <li class ="bpix mb-4 p-4"> <h2>   <%= ttls[i]  %> </h2>   
                 <p> <%= blgs[i] %></p>
 
-                <button class="btn btn-primary act">Read Full Blog  </button>
+                <form action="/blogsDel" method = "POST">
+
+
+                  <button  type="submit" name = "deleteBtns" id="blogTitle<%= i %>" value = "<%= i %>" class="btn btn-primary act">Delete   </button>
+
+
+
+                </form>
+                <div>
+                  <button   id="blogEdit<%= i %>" class="btn btn-primary act">Edit   </button>
+
+
+
+                </div>
+
                 
                 </li>
               
