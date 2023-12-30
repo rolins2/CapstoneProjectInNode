@@ -27,6 +27,14 @@ app.get("/newBlog.ejs",(req,res)=>{
   res.render("newBlog.ejs");
 })
 
+
+app.get("/edit.ejs",(req,res)=>{
+
+   let bzz =ttls[0];
+  let lzz = blgs[0];
+  res.render("edit.ejs",{bzz,lzz});
+
+})
 app.post("/submit",(req,res)=>{
      ttls.push(req.body.blogsName);
      blgs.push(req.body.blogsContent);

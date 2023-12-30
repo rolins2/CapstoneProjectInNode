@@ -1,0 +1,32 @@
+<%-include("partials/header.ejs") %>
+
+
+
+<div >
+
+    <div class = "container">
+
+        <h2>Edit Post </h2>
+
+        <form>
+            <label for="exampleInputEmail1" class="form-label">Blog Name </label> 
+            <input class="form-control" id="exampleInputEmail1" name ="inputName" value="<%=bzz %>" type="text">
+
+            <div class="mb-3">
+                <label for="blogContent" class="form-label">Blog content </label>
+                <textarea id = "blogContent" name = "txtAreaBlg"  class="form-control" cols="50%" rows="8" ><%=lzz %>  </textarea>
+
+            </div>
+
+           
+        </form>
+
+    </div>
+
+</div>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
