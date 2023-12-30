@@ -40,6 +40,16 @@ app.post("/submit",(req,res)=>{
 
 app.post("/blogsDel",(req,res)=>{
   console.log("delete blog are you sure ?");
-  console.log(req.body);
-  console.log(req.body.deleteBtns);
+
+  let nm = req.body.deleteBtns;
+
+  console.log(ttls[nm]);
+  console.log(blgs[nm]);
+
+  ttls.pop(nm);
+  blgs.pop(nm);
+
+  res.render("index.ejs",{ttls,blgs});
+
+  
 })
