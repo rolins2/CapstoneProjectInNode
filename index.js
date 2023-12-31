@@ -7,6 +7,8 @@ const ttls =["Cattao"];
 const blgs =["Leandro torsad was a substitution that changed liverpools game"];
 
 
+let gw =0;
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -46,6 +48,8 @@ app.post("/edit.ejs",(req,res)=>{
   console.log(req.body.ed);
   let nums = req.body.ed;
 
+  gw =nums;
+
   let bzz =ttls[nums];
   let lzz = blgs[nums];
 
@@ -80,4 +84,25 @@ app.post("/blogsDel",(req,res)=>{
   res.render("index.ejs",{ttls,blgs});
 
   
+})
+
+
+app.post("/submits",(req,res)=>{
+
+  console.log("gonna edit post soon");
+  console.log(req.body.inputName);
+
+console.log(req.body.txtAreaBlg);
+
+ttls[gw] = req.body.inputName;
+blgs[gw] = req.body.txtAreaBlg;
+
+res.render("index.ejs",{ttls,blgs});
+
+
+
+
+
+
+
 })
