@@ -27,12 +27,32 @@ app.get("/newBlog.ejs",(req,res)=>{
   res.render("newBlog.ejs");
 })
 
-
 app.get("/edit.ejs",(req,res)=>{
 
-   let bzz =ttls[0];
-  let lzz = blgs[0];
+  let bzz =ttls[0];
+ let lzz = blgs[0];
+ console.log("gonna edit");
+ console.log(req.body.editzz);
+
+ res.render("edit.ejs",{bzz,lzz});
+
+
+})
+
+app.post("/edit.ejs",(req,res)=>{
+
+  
+  console.log("gonna edit post ");
+  console.log(req.body.ed);
+  let nums = req.body.ed;
+
+  let bzz =ttls[nums];
+  let lzz = blgs[nums];
+
+  console.log(ttls[nums]);
+
   res.render("edit.ejs",{bzz,lzz});
+
 
 })
 app.post("/submit",(req,res)=>{

@@ -67,10 +67,14 @@
 
                 </form>
                 <div>
-                  <button   id="blogEdit<%= i %>" class="btn btn-primary act">Edit   </button>
+                
+                  <form action="/edit.ejs" method="post">
 
-                  <a href="/edit.ejs" > Some button </a>
 
+                    <button  type = "submit"   name = "ed" value ="<%=i %>" class="btn btn-primary act" id="blogEdit<%= i %>" >Edit   </button>
+
+
+                    </form>
 
 
                 </div>
